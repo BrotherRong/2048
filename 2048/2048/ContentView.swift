@@ -15,11 +15,23 @@ func abs(_ ip :CGFloat) -> CGFloat{
     return ip>0 ? ip : -ip
 }
 
+var score = 0
+var highestScore = 0
+
+func initUserData()->Int{
+    if let number = UserDefaults.standard.object(forKey: "HighestScore") as? Int {
+        highestScore = number
+    }
+    return highestScore
+}
+
 struct ContentView: View {
+
     @State var coordinates:(x:Int,y:Int) = (0,0)
     @State var losing = false
     @ObservedObject var UserData : Main = Main()
-        
+    // 看是否有最高分
+    var data = initUserData()
     var SwipGesture : some Gesture {
         DragGesture()
       .onEnded({position in
@@ -36,7 +48,6 @@ struct ContentView: View {
                   self.losing = true
               }
           }
-          
          
       })
     }
@@ -44,7 +55,10 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             VStack {
-//                Form{
+                Text("Score:\(score)").font(.largeTitle).fontWeight(.heavy).offset(x:UIScreen.main.bounds.width/5,y:-UIScreen.main.bounds.height/8)
+                Text("历史最高:\(highestScore)").font(.headline).offset(x:UIScreen.main.bounds.width/5,y:-UIScreen.main.bounds.height/8)
+
+                //                Form{
 //
 //                    Stepper(value: self.$coordinates.x, in:0...3) {
 //                        Text("横坐标\(self.coordinates.x)")

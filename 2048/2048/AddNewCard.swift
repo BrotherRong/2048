@@ -27,6 +27,12 @@ extension Main {
     
     func addNewCard() ->Bool {
         if isFull(){
+            highestScore = initUserData()
+            if score>highestScore
+            {
+               dataStore()
+               highestScore = score
+            }
             return false
         }else {
             var Xcoor = arc4random()%4

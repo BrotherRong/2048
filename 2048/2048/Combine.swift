@@ -9,6 +9,7 @@
 import SwiftUI
 
 extension Main{
+
     func combine(in direction:Move){
         let selection = self.sort(in: direction)
         for i in selection {
@@ -24,7 +25,10 @@ extension Main{
                     self.Cards[i].coordinates.y +=  CGFloat(travel(in: direction).y)
                     self.Cards[index].number *= 2
                     self.Cards[i].deleted = true
-                    
+                    score += self.Cards[index].number
+//                    dataStore()
+//                    highestScore = initUserData()
+//                    NSLog("%ld",highestScore)
                 }
             }
             
@@ -38,4 +42,10 @@ extension Main{
         self.move(in: direction)
     }
     
+}
+
+struct Combine_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+    }
 }

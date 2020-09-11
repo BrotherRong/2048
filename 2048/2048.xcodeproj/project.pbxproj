@@ -467,6 +467,7 @@
 				DEVELOPMENT_TEAM = 9C64FLHAC9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = 2048/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -487,6 +488,7 @@
 				DEVELOPMENT_TEAM = 9C64FLHAC9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = 2048/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
