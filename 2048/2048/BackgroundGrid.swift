@@ -10,8 +10,8 @@ import SwiftUI
 
 struct BackgroundGrid: View {
     
-    var length  = 4
-    var spacing = 15
+    var length  = 4.5
+    var spacing = 14
     var body: some View {
         GeometryReader{ geometry in
             VStack(spacing : CGFloat(self.spacing)) {

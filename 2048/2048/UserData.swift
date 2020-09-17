@@ -15,8 +15,8 @@ class Main: ObservableObject{
     @Published var Cards : [Card]
     init() {
         self.Cards = []
-        self.Cards.append(Card(number: 2, coordinates: (0,1), id: self.Cards.count))
-        self.Cards.append(Card(number: 2, coordinates: (0,2), id: self.Cards.count))
+        self.Cards.append(Card(number: 2, coordinates: (2,1), id: self.Cards.count))
+        self.Cards.append(Card(number: 2, coordinates: (3,2), id: self.Cards.count))
     }
     
     

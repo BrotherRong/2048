@@ -22,8 +22,8 @@ struct SingleCard: View {
         return self.UserData.Cards.firstIndex(where: {$0.id == self.card.id})!
     }
     
-    var length = 4
-    var spacing :CGFloat = 15
+    var length = 4.5
+    var spacing :CGFloat = 14
     
 //   @State var coordinates:(x:CGFloat,y:CGFloat) = (0,0)
 //    @State var original :(x:Int,y:Int)
@@ -48,7 +48,7 @@ struct SingleCard: View {
             .foregroundColor(Color(String(self.UserData.Cards[self.index].number)))
 //                .scaleEffect(self.floatScale)
 //                .shadow(radius: self.floatScale == 1.1 ? 10: 0,x:0,y:self.floatScale == 1.1 ? 10:0)
-                .offset(x:-0.5*CGFloat(self.length-1)*(geometry.size.width/CGFloat(self.length)+self.spacing),y:-0.5*CGFloat(self.length-1)*(geometry.size.height/CGFloat(self.length)+self.spacing))
+//                .offset(x:-0.5*CGFloat(self.length-1)*(geometry.size.width/CGFloat(self.length)+self.spacing),y:-0.5*CGFloat(self.length-1)*(geometry.size.height/CGFloat(self.length)+self.spacing))
                 .offset(x :
                 CGFloat(self.UserData.Cards[self.index].coordinates.x)*(geometry.size.width/CGFloat(self.length)+self.spacing),
                     y:
