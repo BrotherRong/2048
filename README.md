@@ -7,4 +7,5 @@
 
 
 
-<img src="https://github.com/BrotherRong/2048/blob/master/pic/002.pic.jpg?raw=true" alt="image" style="zoom:50%;" />
+<img src="https://github.com/BrotherRong/2048/blob/master/pic/002.png?raw=true" alt="image" style="zoom:50%;" />
+
